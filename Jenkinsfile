@@ -14,10 +14,11 @@ pipeline {
             }
         }
         stage('SonarQube Analysis') {
-            
+            steps{
                 withSonarQubeEnv(credentialsId: 'sonar-jenkins') {
                     sh "${scannerHome}/bin/sonar-scanner"
-                    }
+                  }  
+                  }
             }
 
         
