@@ -20,7 +20,7 @@ pipeline {
 				def scannerHome = tool 'SonarQube';
 			}
                 withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'sonar-jenkins') {
-                    sh '/home/ec2-user/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner
+                    sh '/home/ec2-user/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner'
                     }  
                   }
             }
