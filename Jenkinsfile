@@ -13,13 +13,12 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '**']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHub', url: 'https://github.com/abhisheknanarkar24/python-poc.git']]])
             }
         }
-    stage('SonarQube Analysis') {
-        
-            
-        withSonarQubeEnv(credentialsId: 'sonar-jenkins') {
-    sh "${scannerHome}/bin/sonar-scanner"
-    }
-}
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv(credentialsId: 'sonar-jenkins') {
+                    sh "${scannerHome}/bin/sonar-scanner"
+                    }
+            }
 
         
         stage('Build Docker Image') {
