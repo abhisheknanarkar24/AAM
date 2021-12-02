@@ -16,11 +16,8 @@ pipeline {
         stage('SonarQube Analysis') {
             
             steps{
-                script{
-				def scannerHome = tool 'SonarQube';
-			}
                 withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'sonar-jenkins') {
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh "/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner"
                   }  
                   }
             }
