@@ -20,10 +20,7 @@ pipeline {
 				def scannerHome = tool 'SonarQube';
 			}
                 withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'sonar-jenkins') {
-                    sh "/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner -X -Dsonar.projectKey=AAM \
-                                                         -Dsonar.sources=. \
-                                                         -Dsonar.host.url=http://3.87.69.136:9000 \
-                                                         -Dsonar.login=ccd4e1fce79128cd9de89e0db03ccf377033d940"
+                    sh "/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner -X -Dsonar.projectKey=AAM"
                   }  
                   }
             }
