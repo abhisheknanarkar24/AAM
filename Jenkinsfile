@@ -17,7 +17,7 @@ pipeline {
             
             steps{
                 withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'sonar-jenkins') {
-                    sh "/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -Dsonar.projectKey=AAM"
+                    sh "/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner"
                   }  
                   }
             }
