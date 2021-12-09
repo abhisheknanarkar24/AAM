@@ -13,3 +13,4 @@ remove build scm pooling
 test-1: check feature branch
 test-2: checking triggering behaviour 
 test-3: again checking triggering behaviour 
+test-4: checking pipleine job: premerged. 
