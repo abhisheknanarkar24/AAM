@@ -15,3 +15,4 @@ test-2: checking triggering behaviour
 test-3: again checking triggering behaviour 
 test-4: checking pipleine job: premerged. 
 test-5: rechecking webhook
+test 6: added some changes
